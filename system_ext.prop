@@ -1,0 +1,9 @@
+# Audio
+ro.audio.ihaladaptervendorextension_enabled=true
+
+# DPM
+persist.vendor.dpm.feature=11
+
+# Miscellaneous
+ro.system_ext.build.version.sdk_full=36.0
+
