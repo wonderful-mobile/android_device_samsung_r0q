@@ -1,0 +1,7 @@
+allow init carrier_file:dir mounton;
+allow init dqmdbg_file:dir mounton;
+allow init efs_file:dir mounton;
+allow init sec_efs_file:dir mounton;
+allow init spu_file:dir mounton;
+
+allow init proc_last_kmsg:file setattr;

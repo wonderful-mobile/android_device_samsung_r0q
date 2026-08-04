@@ -1,0 +1,2 @@
+# Surfaceflinger has nothing with the /spu
+dontaudit surfaceflinger spu_file:dir search;

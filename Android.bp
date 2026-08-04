@@ -1,0 +1,114 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+soong_namespace {
+    imports: [
+        "hardware/google/interfaces",
+        "hardware/google/pixel",
+        "hardware/lineage/interfaces/power-libperfmgr",
+    ],
+}
+
+install_symlink {
+    name: "firmware_wlanmdsp.otaupdate_symlink",
+    vendor: true,
+    installed_location: "firmware/wlanmdsp.otaupdate",
+    symlink_target: "/data/vendor/firmware/wlanmdsp.mbn",
+}
+
+install_symlink {
+    name: "firmware_wlan_mac.bin_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/qca_cld/wlan_mac.bin",
+    symlink_target: "/mnt/vendor/persist/wlan_mac.bin",
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_authfw_interface",
+    interfaces: [
+        "vendor.samsung.hardware.authfw@1.0::ISehAuthenticationFramework",
+    ],
+}
+prebuilt_hidl_interfaces {
+    name: "hidl_camera_interface",
+    interfaces: [
+        "vendor.samsung.hardware.camera.provider@4.0::ISehCameraProvider",
+    ],
+}
+prebuilt_hidl_interfaces {
+    name: "hidl_drk_interface",
+    interfaces: [
+        "vendor.samsung.hardware.security.drk@2.0::ISehDrk",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_wifi_hostapd_interface",
+    interfaces: [
+        "vendor.samsung.hardware.wifi.hostapd@4.0::ISehHostapd",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_wifi_supplicant_interface",
+    interfaces: [
+        "vendor.samsung.hardware.wifi.supplicant@3.0::ISehSupplicant",
+        "vendor.samsung.hardware.wifi.supplicant@3.1::ISehSupplicant",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_sam_hdcp_interface",
+    interfaces: [
+        "vendor.samsung.hardware.security.hdcp.keyprovisioning@1.0::ISehHdcpKeyProvisioning",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_sam_skpm_interface",
+    interfaces: [
+        "vendor.samsung.hardware.security.skpm@1.0::ISehSkpm",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_sam_tlc_ddar_interface",
+    interfaces: [
+        "vendor.samsung.hardware.tlc.ddar@1.0::ISehDdar",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_sam_tlc_iccc_interface",
+    interfaces: [
+        "vendor.samsung.hardware.tlc.iccc@1.0::ISehIccc",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_sam_tlc_hdm_interface",
+    interfaces: [
+        "vendor.samsung.hardware.tlc.hdm@1.0::ISehHdm",
+        "vendor.samsung.hardware.tlc.hdm@1.1::ISehHdm",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_sam_tlc_ucm_interface",
+    interfaces: [
+        "vendor.samsung.hardware.tlc.ucm@2.0::ISehUcm",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_sam_seh_wifi_interface",
+    interfaces: [
+        "vendor.samsung.hardware.wifi@2.0::ISehWifi",
+        "vendor.samsung.hardware.wifi@2.1::ISehWifi",
+        "vendor.samsung.hardware.wifi@2.2::ISehWifi",
+        "vendor.samsung.hardware.wifi@2.3::ISehWifi",
+    ],
+}

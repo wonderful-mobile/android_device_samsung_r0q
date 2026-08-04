@@ -1,0 +1,77 @@
+# Audio
+type vendor_sysfs_cirrus_cal, fs_type, sysfs_type;
+type vendor_audiopcm_data_file, file_type, data_file_type;
+
+# Camera
+type vendor_sysfs_camera_writable, fs_type, sysfs_type;
+
+# Convergence (BT/WiFi)
+type vendor_convergence_data_file, file_type, data_file_type;
+
+# Display
+type vendor_sysfs_display, fs_type, sysfs_type;
+type vendor_sysfs_mdnie, fs_type, sysfs_type;
+
+# EFS
+type app_efs_file, file_type;
+type battery_efs_file, file_type;
+type camera_efs_file, file_type;
+type dak_efs_file, file_type;
+type imei_efs_file, file_type;
+type sec_efs_file, file_type;
+type wifi_efs_file, file_type;
+
+# Fastcharge
+type sysfs_sec_fastcharge, fs_type, sysfs_type;
+type sysfs_sec_fastcharge_writable, fs_type, sysfs_type;
+
+# Fingerprint
+type vendor_biometrics_data_file, file_type, data_file_type;
+
+# Gatekeeper
+type vendor_gatekeeper_data_file, file_type, data_file_type;
+
+# GNSS
+type vendor_gnss_data_file, file_type, data_file_type;
+
+# Input
+type proc_bus_input, fs_type, proc_type;
+type vendor_sysfs_input, fs_type, sysfs_type;
+
+# Keymaster
+type vendor_keymaster_data_file, file_type, data_file_type;
+
+# Last kmsg
+type proc_last_kmsg, fs_type, proc_type;
+
+# Memory
+type sysfs_oem_memory, fs_type, sysfs_type;
+
+# Radio
+type proc_simslot_count, fs_type, proc_type;
+
+# Root folders
+type carrier_file, fs_type;
+allow carrier_file labeledfs:filesystem associate;
+
+type dqmdbg_file, fs_type;
+allow dqmdbg_file labeledfs:filesystem associate;
+
+type misc_file, fs_type;
+allow misc_file labeledfs:filesystem associate;
+
+type omr_file, fs_type;
+allow omr_file labeledfs:filesystem associate;
+
+type spu_file, fs_type;
+allow spu_file labeledfs:filesystem associate;
+
+# Thermal
+type vendor_sysfs_thermal, fs_type, sysfs_type;
+
+# Touchscreen
+type vendor_sysfs_touchscreen, fs_type, sysfs_type;
+type vendor_sysfs_touchscreen_writable, fs_type, sysfs_type;
+
+# WiFi
+type sysfs_wifi, fs_type, sysfs_type;

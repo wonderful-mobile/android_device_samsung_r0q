@@ -1,0 +1,16 @@
+type secril_config_svc_exec, exec_type, file_type, vendor_file_type;
+type secril_config_svc, domain, halserverdomain, hal_telephony, hal_telephony_server;
+
+init_daemon_domain(secril_config_svc)
+
+r_dir_file(secril_config_svc, sec_efs_file)
+
+allow secril_config_svc mnt_vendor_file:dir search;
+
+allow secril_config_svc imei_efs_file:dir create_dir_perms;
+allow secril_config_svc imei_efs_file:file create_file_perms;
+
+allow secril_config_svc proc_simslot_count:file r_file_perms;
+
+set_prop(secril_config_svc, radio_prop)
+set_prop(secril_config_svc, vendor_radio_prop)

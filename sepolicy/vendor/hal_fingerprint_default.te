@@ -1,0 +1,18 @@
+allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
+
+allow hal_fingerprint_default goodix_device:chr_file rw_file_perms;
+allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
+
+allow hal_fingerprint_default vendor_biometrics_data_file:dir create_dir_perms;
+allow hal_fingerprint_default vendor_biometrics_data_file:file create_file_perms;
+
+allow hal_fingerprint_default sec_efs_file:dir r_dir_perms;
+allow hal_fingerprint_default sec_efs_file:file r_file_perms;
+
+r_dir_file(hal_fingerprint_default, efs_file)
+
+allow hal_fingerprint_default vendor_sysfs_display:dir r_dir_perms;
+allow hal_fingerprint_default vendor_sysfs_display:file r_file_perms;
+
+allow hal_fingerprint_default vendor_sysfs_touchscreen:dir r_dir_perms;
+allow hal_fingerprint_default vendor_sysfs_touchscreen_writable:file rw_file_perms;

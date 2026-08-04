@@ -1,0 +1,9 @@
+allow hal_secure_element_default secure_element_device:chr_file rw_file_perms;
+
+allow hal_secure_element_default rild:unix_stream_socket connectto;
+
+allow hal_secure_element_default system_suspend_hwservice:hwservice_manager find;
+
+set_prop(hal_secure_element_default, vendor_sehal_prop)
+
+wakelock_use(hal_secure_element_default)

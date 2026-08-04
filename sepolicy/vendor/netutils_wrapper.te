@@ -1,0 +1,15 @@
+allow netutils_wrapper sec_efs_file:file rw_file_perms;
+
+allow netutils_wrapper drb_device:chr_file rw_file_perms;
+
+allow netutils_wrapper tun_device:chr_file rw_file_perms;
+
+allow netutils_wrapper rild:fd use;
+allow netutils_wrapper rild:fifo_file { read write };
+allow netutils_wrapper rild:netlink_route_socket { read write };
+allow netutils_wrapper rild:unix_stream_socket { read write };
+allow netutils_wrapper rild:udp_socket { read write };
+allow netutils_wrapper rild:tcp_socket { read write };
+allow netutils_wrapper rild:udp_socket { read write };
+allow netutils_wrapper rild:netlink_generic_socket { read write };
+allow netutils_wrapper rild:netlink_xfrm_socket { read write };

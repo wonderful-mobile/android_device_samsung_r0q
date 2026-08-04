@@ -1,0 +1,8 @@
+allow hal_sensors_default system_server:binder call;
+allow hal_sensors_default vendor_sysfs_touchscreen:dir search;
+allow hal_sensors_default { vendor_sysfs_touchscreen vendor_sysfs_touchscreen_writable }:dir search;
+allow hal_sensors_default { vendor_sysfs_touchscreen vendor_sysfs_touchscreen_writable }:file { getattr open read write };
+
+allow hal_sensors_default vendor_sysfs_input:dir { open read search };
+
+set_prop(hal_sensors_default, sns_camera_light_prop)

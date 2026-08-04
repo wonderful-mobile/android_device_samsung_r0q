@@ -1,0 +1,8 @@
+# RIL
+ro.vendor.qti.va_aosp.support=1
+
+# Netflix
+ro.netflix.bsp_rev=Q8450-34634-1
+
+# CameraX
+ro.camerax.extensions.enabled=true

@@ -1,0 +1,15 @@
+r_dir_file(hal_thermal_default, sysfs_power)
+allow hal_thermal_default sysfs_power:lnk_file r_file_perms;
+
+r_dir_file(hal_thermal_default, vendor_sysfs_thermal)
+allow hal_thermal_default vendor_sysfs_thermal:file w_file_perms;
+
+allow hal_thermal_default sysfs_batteryinfo:file r_file_perms;
+
+allow hal_thermal_default fwk_camera_hwservice:hwservice_manager find;
+
+binder_call(hal_thermal_default, cameraserver)
+
+hal_client_domain(hal_thermal_default, hal_audio)
+
+add_hwservice(hal_thermal_server, hal_thermal_samsung_hwservice)
