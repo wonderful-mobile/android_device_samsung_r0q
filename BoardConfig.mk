@@ -125,7 +125,6 @@ TARGET_KERNEL_EXT_MODULE_ROOT := kernel/samsung/sm8450-modules
 TARGET_KERNEL_EXT_MODULES := \
  	qcom/opensource/mmrm-driver \
  	qcom/opensource/audio-kernel \
- 	qcom/opensource/camera-kernel \
 	qcom/opensource/dataipa/drivers/platform/msm \
 	qcom/opensource/datarmnet/core \
 	qcom/opensource/datarmnet-ext/aps \
