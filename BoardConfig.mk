@@ -95,17 +95,19 @@ BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 # TARGET_NEEDS_DTBOIMAGE := true
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
-TARGET_KERNEL_CONFIG := gki_defconfig \
-    vendor/waipio-gki_defconfig \
-    vendor/waipio_GKI.config
-TARGET_KERNEL_SOURCE := kernel/samsung/sm8450
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    PROJECT_NAME=r0q
+#TARGET_KERNEL_CONFIG := gki_defconfig \
+#    vendor/waipio-gki_defconfig \
+#    vendor/waipio_GKI.config
+TARGET_KERNEL_VERSION := 5.10
+#TARGET_KERNEL_SOURCE := kernel/samsung/sm8450
+#TARGET_KERNEL_ADDITIONAL_FLAGS := \
+#    PROJECT_NAME=r0q
 TARGET_KERNEL_CLANG_VERSION := r416183b
 TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
 
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
+
 
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_KERNEL_SEPARATED_DTBO := 
@@ -121,23 +123,23 @@ BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules
 BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
 RECOVERY_KERNEL_MODULES := $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 
-TARGET_KERNEL_EXT_MODULE_ROOT := kernel/samsung/sm8450-modules
-TARGET_KERNEL_EXT_MODULES := \
- 	qcom/opensource/mmrm-driver \
- 	qcom/opensource/audio-kernel \
-	qcom/opensource/dataipa/drivers/platform/msm \
-	qcom/opensource/datarmnet/core \
-	qcom/opensource/datarmnet-ext/aps \
-	qcom/opensource/datarmnet-ext/offload \
-	qcom/opensource/datarmnet-ext/shs \
-	qcom/opensource/datarmnet-ext/perf \
-	qcom/opensource/datarmnet-ext/perf_tether \
-	qcom/opensource/datarmnet-ext/sch \
-	qcom/opensource/datarmnet-ext/wlan \
- 	qcom/opensource/display-drivers/msm \
- 	qcom/opensource/eva-kernel \
- 	qcom/opensource/video-driver \
- 	qcom/opensource/wlan/qcacld-3.0/.qca6490
+#TARGET_KERNEL_EXT_MODULE_ROOT := kernel/samsung/sm8450-modules
+#TARGET_KERNEL_EXT_MODULES := \
+# 	qcom/opensource/mmrm-driver \
+# 	qcom/opensource/audio-kernel \
+#	qcom/opensource/dataipa/drivers/platform/msm \
+#	qcom/opensource/datarmnet/core \
+#	qcom/opensource/datarmnet-ext/aps \
+#	qcom/opensource/datarmnet-ext/offload \
+#	qcom/opensource/datarmnet-ext/shs \
+#	qcom/opensource/datarmnet-ext/perf \
+#	qcom/opensource/datarmnet-ext/perf_tether \
+#	qcom/opensource/datarmnet-ext/sch \
+#	qcom/opensource/datarmnet-ext/wlan \
+# 	qcom/opensource/display-drivers/msm \
+# 	qcom/opensource/eva-kernel \
+# 	qcom/opensource/video-driver \
+# 	qcom/opensource/wlan/qcacld-3.0/.qca6490
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -190,7 +192,7 @@ BOARD_HAS_DOWNLOAD_MODE := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-BOARD_RECOVERY_MKBOOTIMG_ARGS += --header_version 2
+BOARD_RECOVERY_MKBOOTIMG_ARGS += --header_version 2 --board $(BOARD_BOOT_HEADER_NAME) --base 0x00000000 --pagesize 4096 --kernel_offset 0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x01e00000 --dtb_offset 0x01f00000 --dtb $(TARGET_PREBUILT_DTB) --cmdline "video=vfb:640x400,bpp=32,memsize=3072000 printk.devkmsg=on firmware_class.path=/vendor/firmware_mnt/image console=null bootconfig androidboot.hardware=qcom hardware=qcom androidboot.memcg=1 androidboot.usbcontroller=a600000.dwc3 androidboot.selinux=permissive androidboot.init_fatal_panic=true loop.max_part=7"
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
@@ -253,3 +255,14 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
 # Inherit the proprietary files
 include vendor/samsung/r0q/BoardConfigVendor.mk
+
+# Prebuilt stock kernel (bring-up)
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
+
+# Recovery
+
+# Prebuilt kernel modules (stock, matches prebuilt Image)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/modules/*.ko)
+
+# Stock recovery dtbo (3473386 bytes, not the full 8MB dtbo.img)
+BOARD_PREBUILT_RECOVERY_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/recovery_dtbo.img
