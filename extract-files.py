@@ -26,6 +26,7 @@ namespace_imports = [
     'vendor/qcom/opensource/dataservices',
     'hardware/qcom-caf/wlan',
     'hardware/qcom/wlan/legacy',
+    'hardware/qcom-caf/common/libqti-perfd-client',
 ]
 
 # Lib fixups

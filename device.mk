@@ -362,6 +362,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common \
     hardware/samsung \
     kernel/samsung/sm8450 \
     kernel/samsung/sm8450-modules
@@ -391,7 +392,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
-    libwifi-hal-ctrl \
     WifiOverlay \
     wpa_cli \
     wpa_supplicant \

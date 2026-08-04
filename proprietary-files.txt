@@ -89,8 +89,6 @@ vendor/lib64/libsecaudioinfo.so|81f0ce7e1dd3dd68efc291cd2c7de9fb2dc50a5f
 vendor/lib/soundfx/libasphere.so|3473b646a30360b0521059e180fb3a4b600214c9
 vendor/lib/soundfx/libaudioeffectoffload.so|cb161f74fbdb0a97c36e63c86ac085e71dfe69d4
 vendor/lib/soundfx/libaudiosaplus_sec.so|ea2cceb31315308a2cb4959dd0b72a79c41aef0b
-vendor/lib/soundfx/libdynproc.so|9889411577bcb46de9d85e9de2e9922a1832b8ef
-vendor/lib/soundfx/libhapticgenerator.so|43f61823002ce08fd116981f60a6e3b2143436b6
 vendor/lib/soundfx/libmyspace.so|51b7ecdd4f1ee45f37412124089fab8d42e1c236
 vendor/lib/soundfx/libsamsungSoundbooster_plus.so|2d4231081c4fcb6fe50816892a8965d3e001c841
 vendor/lib/soundfx/libshoebox.so|afbf0e1a28842394c1c8456a3f8eb8d4f28b4684
@@ -100,16 +98,12 @@ vendor/lib/lib_SoundAlive_3DPosition_ver202.so|cfdaaed45b7b1c5ca6656f38cef8305d4
 vendor/lib64/soundfx/libasphere.so|d48dbb697e4ecf01bc188a18f0f9568232b435e6
 vendor/lib64/soundfx/libaudioeffectoffload.so|29d1c091f8f4416c771f828d50f24a48f123ce4f
 vendor/lib64/soundfx/libaudiosaplus_sec.so|d833ffc976def9f82a0798706846b19184c0ac87
-vendor/lib64/soundfx/libdynproc.so|43a2f6e5e66468591d0e19a2ee38360af3c68b17
-vendor/lib64/soundfx/libhapticgenerator.so|28d977d5110e10fa88745112cdc5a079245d78d6
 vendor/lib64/soundfx/libmyspace.so|ebb8f4c9fcf48553e73827cc273bd6f217f067b7
 vendor/lib64/soundfx/libsamsungSoundbooster_plus.so|60baefca28b3b55cff2d99fd825e4b6a34f56bea
 vendor/lib64/soundfx/libshoebox.so|f540e4b7b3cf61503ffca56234f054ac94c7e8d6
 vendor/lib64/soundfx/libswdap.so|69350278a6a567893ddca82cdddfb32684c34d55
 vendor/lib64/soundfx/libswspatializer.so|e2718b190e9db5f9f12722f015d0384d55eb6a17
 vendor/lib64/lib_SoundAlive_3DPosition_ver202.so|7437fc320250d0cd699719a7429448963253cc2e
-vendor/lib/libar-pal.so;DISABLE_CHECKELF|a636484285ea3b71b55c3e4f6819ca90aee5bb1c
-vendor/lib64/libar-pal.so;DISABLE_CHECKELF|0c6ecb9a9e7d99cd821582e8ea636967768a9e0c
 
 # Audio AGM
 vendor/bin/hw/vendor.qti.hardware.AGMIPC@1.0-service;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|d13834b69453bbce425a5bdd83f742126844823b
@@ -135,8 +129,6 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|e55bc3d878f1619957517
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|967d8efa650d8a8c42d5c09871813dc3009d32f7
 
 # Bluetooth (A2DP)
-vendor/lib/hw/audio.bluetooth.default.so|0d5bc236142400f5610c75441273e116951cdec4
-vendor/lib64/hw/audio.bluetooth.default.so|324ef08a09672c696743d3b02e4b7750e71368ad
 
 # Camera
 vendor/lib/camera/com.qti.eeprom.gt24p128c2csli_imx766.so|05f333684a2314f95e5d7a80547d6564571051e2
@@ -746,13 +738,9 @@ vendor/lib64/vendor.qti.diaghal@1.0.so|6272ead540f1f91ba2bd3afc73916d8e78712b90
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine|51c72c9dfe43eb9760a7bcebb5d60deeb3132750
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
-vendor/lib/mediacas/libclearkeycasplugin.so|66e03094246d2c557743f9e5997e4c1bb7655368
-vendor/lib/mediadrm/libdrmclearkeyplugin.so|63e7801e973d9020492c0ce6576877a7befd8ab4
 vendor/lib/mediadrm/libwvdrmengine.so|efa3554cbdf57233432ef6390527db0f0f4e4c42
 vendor/lib/liboemcrypto.so|73de103142eda8f2df48a7bff23b98732f201914
 vendor/lib/libwvhidl.so|9a12b88f7bf3a83f64fe187507f1ed96c97a362b
-vendor/lib64/mediacas/libclearkeycasplugin.so|105179d79f1476494eb2539b33862b40fec24023
-vendor/lib64/mediadrm/libdrmclearkeyplugin.so|add678f77a67da49c7f0cae176f4dcc28dc874cd
 vendor/lib64/mediadrm/libwvdrmengine.so|f4c2da79577feed245dda0e73a3c1cedc62f75f9
 vendor/lib64/liboemcrypto.so|1b1cf9c39a4960be794da3443438f2b11203a3fa
 vendor/lib64/libwvhidl.so|da054c8aecda51ee477834298dfcb469dcd6ecc7
@@ -804,11 +792,9 @@ vendor/bin/hw/android.hardware.gatekeeper@1.0-service|60008901d6572585800191147f
 vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0|d7177184f28472da37742c6083515b7dff73a50b
 vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc|2c8d0c86f43b543e0d07cb34aa31b3b307240c8a
 vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc|7b100dbeffe9e6b9fe682543eede01d55b0f4e23
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so|e8dd9ed486a3ec0774efa3308565ffbeee614193
 vendor/lib/vendor.qti.spu@1.0.so|99d4c277b677b8d3613e995c9fd2088b7e2fe4b1
 vendor/lib/vendor.qti.spu@1.1.so|f321f05cc1b095907839fc0803fb123891e71496
 vendor/lib/vendor.qti.spu@2.0.so|2258c25053ccb6eb338ff06010e7ce291de3af26
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so|6a0a02c940c4f1ad3c1302d1734320aaac28fd76
 vendor/lib64/hw/gatekeeper.mdfpp.so|ca02d2c7d02512038d7ee3f0d90c1454a84e5186|58ad147907b9f605d477d85ee1df1aa7686eef48
 vendor/lib64/vendor.qti.spu@1.0.so|a445d29112580b0b9691941f28409d8149a4f660
 vendor/lib64/vendor.qti.spu@1.1.so|9a7ee4bee9eb92715e9e7c189384ff6eec5511f2
@@ -1068,8 +1054,6 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so|1d874bee122066d065d2697149a618c96ff
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|f76947129ec72fd2c8b6e68e9b8385dc5dbd5940
 
 # RenderScript
-vendor/lib/hw/android.hardware.renderscript@1.0-impl.so|7b046147663de05b825de74cea175ef910474791
-vendor/lib64/hw/android.hardware.renderscript@1.0-impl.so|416c67b669e80ca6e0168638ee6913d87b9ced10
 
 # Secure element (power manager)
 vendor/lib/vendor.qti.esepowermanager@1.0.so|31372aea012b63be4722e665cbad4fb4c8353f66
@@ -1163,13 +1147,7 @@ vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so|70c8a9f3bda254c44f4
 vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so|9a452f5afa626d0962d3a7b896033713adf7acf3
 
 # Soundtrigger
-vendor/lib/hw/android.hardware.soundtrigger@2.0-impl.so|fb760846da6933dd4a03db2bb7a0efaaa35b12fe
-vendor/lib/hw/android.hardware.soundtrigger@2.1-impl.so|fae28cd046168dd39b9cafe9cdbe7d04f4ca09fb
-vendor/lib/hw/android.hardware.soundtrigger@2.2-impl.so|e5f7c14ede32b971c479491cab67e8f7a586e096
-vendor/lib/hw/android.hardware.soundtrigger@2.3-impl.so|27cec047fc1b80a9fa45bd5eb42315fe796d1ef3
 vendor/lib/vendor.qti.voiceprint@1.0.so|b348392a9ca7e300db03513613b940d0dafa628c
-vendor/lib64/hw/android.hardware.soundtrigger@2.2-impl.so|6c1ddce73ac6691e40b0319cd0348d9fd6c57736
-vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so|aada1ba77349994aab7d09d9c626ce2bd7082be0
 vendor/lib64/vendor.qti.voiceprint@1.0.so|a22f6e641b0e936a468829572ecf325c0583c3c9
 
 # Thermal (Qualcomm)
@@ -1678,11 +1656,8 @@ vendor/lib/lib_SoundAlive_play_plus_ver800.so|32301b48d79baf6205050e50a29518d268
 vendor/lib/libadm.so|23906f0e2484e30ade886d3c4deff76ba7b30b5c
 vendor/lib/libadreno_app_profiles.so|3652806bf9253dcd4680a37f3c4fa26e0d1d0103
 vendor/lib/libadreno_utils.so|53da53ff40c16c08f1d1ba7d74e1369a7aad1eb5
-# vendor/lib/libagm.so
-# vendor/lib/libagmmixer.so
 vendor/lib/libaidenoiser.so|5e0583e8216a7ae04d2b373623616d9d0dac09ae
 vendor/lib/libaivideocentral.arcsoft.so|d71e48336cc2a5424ae2b57669854d3d8558a40f
-# vendor/lib/libats.so
 vendor/lib/libaudio_log_utils.so|afbc7335a0644684ecf0a57ac267b290509c4bb7
 vendor/lib/libauto_framing_arcsoft.uniplugin@1.0.so|93cc57bdffa3012aef7685fb9765f326281fd90c
 vendor/lib/libautotracking_interface.so|6e7d5cae7de7eabd88cbd46d00082e839473ddd5
@@ -1778,8 +1753,6 @@ vendor/lib/liblocationservice_glue.so|b318cf6146d0a9c80febec5871996de0a123cdfc
 vendor/lib/liblocdiagiface.so|6c95641abc4de97b563be07fd7c08fb5442627fa
 vendor/lib/liblowi_client.so|5d0570365a0f7d5a78ed02b5c6b8c0a644895107
 vendor/lib/liblowi_wifihal.so|5e023f88ea4c7bca5dda810c9f14b622d2f087b9
-# vendor/lib/liblx-ar_util.so
-# vendor/lib/liblx-osal.so
 vendor/lib/libmaskdetection.uniplugin@1.0.so|7287480c769660e8b055a4a4e1261ba950875d0d
 vendor/lib/libmctfengine_stub.so|5deae72c980cfe71de15e200d9326adc0b609001
 vendor/lib/libmdmdetect.so|c6ca53ca82999577934f569aed1a8c97605bf260
@@ -2065,20 +2038,9 @@ vendor/lib64/libadreno_utils.so|cdeac389902c0d997b9f58c737378cffb9127f32
 vendor/bin/agmcap;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|bc449b914a3643d8bc6d9a6f32c9c3fc4697e167
 vendor/bin/agmcompressplay;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|662106133a34648cc8d02b1be806abf50d4e1b4a
 vendor/bin/agmplay;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|2213c21215346f5b084b5a57cb9ecf838f5891e8
-vendor/lib64/libagm.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|a0b1f96f15b40c2fa8ed0be74048e9755a5e138c
-vendor/lib64/libagmmixer.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|5829ed1169fce529143785b55fb971c5d8962e0f
-vendor/lib64/libagmclient.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|21fbe5506c642650834e1002b38cc6070bdd2740
-vendor/lib64/libagm_mixer_plugin.so;DISABLE_DEPS;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|a0f226dab252af2bfdb3911e66b3b2f416cf4915
-vendor/lib64/libagm_compress_plugin.so;DISABLE_DEPS;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|acef1145686eaa3badd85d77dae8277a7473ca63
-vendor/lib64/libagm_pcm_plugin.so;DISABLE_DEPS;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|540f94de591482e4c0d905a53b5950247d646c6f
-# vendor/lib64/libsndcardparser.so
 vendor/lib64/libai_denoiser_interface.so|19ed1eacb1850ac100d5691019d62b1283657df3
 vendor/lib64/libaidenoiser.so|ce286ac3dd5e8a7a10d039525bbb15043b5baa3e
 vendor/lib64/libaivideocentral.arcsoft.so|2814aa5f4ea2635ec3535dba8abb627f0f4be7dc
-vendor/lib64/libar-acdb.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|124ab90abaedb9653c914fdc26a790698d9b39a8
-vendor/lib64/libar-gpr.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|f633761b0b017f8047cd645102f5fa2f6d2f4179
-vendor/lib64/libar-gsl.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|b8fa2f85285341895fef850cbd96ea13346fd745
-vendor/lib64/libats.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|75de4771067ca91e25eb43ddf0002b0cba292d0b
 vendor/lib64/libaudio_log_utils.so|8e804321341c55dd2e32b05226b2c474e10f87ca
 vendor/lib64/libauto_framing_arcsoft.uniplugin@1.0.so|013aac81eb55984b9d3754bac12dfb9f5f3894b7
 vendor/lib64/libautotracking_interface.so|b9250a4e6e3549e97b8c25b28cfc5f65077e46c6
@@ -2214,8 +2176,6 @@ vendor/lib64/liblocationservice_glue.so|d596b8f282e3f1851d1b04af1bf72d490db178c4
 vendor/lib64/liblocdiagiface.so|66066b0752a7f03a97efe46ed7f1a3e4dbd1c4e6
 vendor/lib64/liblowi_client.so|30d8b303f09b9d85db333b404e69ef887303fe7a
 vendor/lib64/liblowi_wifihal.so|e860a9f27b42fe79433fcf1f2025ce7edffdba57
-vendor/lib64/liblx-ar_util.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|36d4368bcc41fa1860a7a721a073d67d4ac63b1e
-vendor/lib64/liblx-osal.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE|ad705c715b1b911f8619b4c59b40067d6c0a4eb9
 vendor/lib64/libmaskdetection.uniplugin@1.0.so|44016ce9a121dcc7d2f4093d0e3f1737bb73625c
 vendor/lib64/libmctfengine_stub.so|a900e3219b5a1def882ff8cc983ad37beb27184c
 vendor/lib64/libmdmdetect.so|e2d152c9d3ed4c04f7011daa6fa94179ddc68531
@@ -2370,7 +2330,6 @@ vendor/lib64/libsnaplite_native.so|7bc75a45898dd6cb17612f2bdd2ba30081e8a1fc
 vendor/lib64/libsnaplite_native_secure.so|82c0110dabb7f8d287bfc268c60f5c1657ed7cb8
 vendor/lib64/libsnaplite_wrapper.so|dc2771a9ba056105782eeee200f1181fcd20b81c
 vendor/lib64/libsnaplite_wrapper_secure.so|d077c0c882cfff77ff713b668803c534920c7491
-# vendor/lib64/libsndcardparser.so
 vendor/lib64/libsnpe_dsp_domains_v3.so|7187811f0fc4e96c4ed6da067f91486a65440393
 vendor/lib64/libsnpe_wrapper.so|c78a47ec0da4985877b8c81d39be336c9b6dd208
 vendor/lib64/libsns_device_mode_stub.so|42be9d2510a2c62a04738a3f9a1f14c76cf0c375
@@ -2552,8 +2511,6 @@ vendor/lib/lib_SoundBooster_ver1100.so|e685bab6015eb770aa74219560ddbe35d2af7d19
 vendor/lib/lib_lvacfs.so|375f5a1f15aa2f24076e116a5540bcf4e05e9650
 
 # Blob dependencies
-vendor/lib64/libsndcardparser.so|ee453f120516050af3a08aeea06b57f1b7d98550
-vendor/lib/vndk/libstagefright_xmlparser.so|9500c49e27948eada299af82ce60c1363b99f0cc
 vendor/lib64/libtriplecam_optical_zoom_control.so|f7d0cb2638760ec42faa8a1d9b35c5d36e9b83e5
 vendor/lib64/libtriplecam_video_optical_zoom.so|16d231e8e8f01d8591bcb5ee2d349082f793bf39
 vendor/lib64/libc++_shared.so|ef6cad49e61581e9fa96cae94a8e101077640f78
@@ -2565,8 +2522,37 @@ vendor/lib/libtriplecam_video_optical_zoom.so|0f0a32b44b4848c224501300afae7566d1
 # Vendor blob dependencies
 
 # 32-bit vendor deps
-vendor/lib/libagmclient.so|59a2efbcaf8026989b858a66fc40467378d36d3f
-vendor/lib/libar-gsl.so|92a73344338e47bdbae5744c7f0f7b42686b4429
-vendor/lib/liblx-osal.so|b5fb02b625e7936c1d99b62608e80a3036395918
 vendor/lib/libsecril-client.so|0eadb5ab746d7c448169ca8205932df352d8b32b
-vendor/lib/spatializer-aidl-cpp.so|93aff0a9b806e82d1f18de7fdcc030e20546cab4
+
+# Qualcomm GPS (no sm8450 gps tree in source)
+vendor/lib64/libgps.utils.so|f78714320a9ebe57a8eb37f917633069ea2935ea
+vendor/lib/libgps.utils.so|5bf1d8642310927af5d65390c9a0b3e399a5924b
+vendor/lib64/libloc_core.so|f06a3397ce4d25b11da2cd13c8fab0645fc65e42
+vendor/lib/libloc_core.so|aa73feefea8778a9a7a4dd0945847196d6c74c99
+vendor/lib64/liblocation_api.so|186662d7c57030bed29f8aabd5aa96b88e9ff206
+vendor/lib/liblocation_api.so|ad3061f1707dcb5e47cb389aa943aa6af8b53e34
+vendor/lib64/libgnss.so|e03bf8fd4b0b103d3a1c95d4cb3b8dc663de5d89
+vendor/lib64/libgeofencing.so|9849acf836480366ab9c01ee41dac8baf99f3ee5
+vendor/lib64/libbatching.so|c97d2bb598a4a9bb51f5f90701db9135b8f5dc61
+
+# Removed by AOSP-name sweep but not provided for taro
+vendor/lib64/libOpenCL.so|454b8aaada3a5c449ae90e2232eb761e743fda06
+vendor/lib/libOpenCL.so|801f25596929a2f1ba990759412fc937d7115ed1
+vendor/lib64/libjson.so|0fcc73f7360ca9728ac9ba6d94a07173a3d25c9d
+vendor/lib/libjson.so|c31baac59a8b66ff3e0858e0a078592be8b88ab2
+vendor/lib64/libmemutils.so|51a54ad190272cac6d4fbcfd21cb1b1579d9e829
+vendor/lib64/libvmmem.so|66db400c2471e61fb0c9a8204918fd2f201fe99c
+vendor/lib64/libplatformconfig.so|d15fd0e9884df27c90c1060860c4970bbe9f6f4a
+vendor/lib/libplatformconfig.so|b104657ca6632116b5ee2432db4b4aceb6ce01bd
+vendor/lib64/libsensorndkbridge.so|ad0d647b989b217776690f3623f669224c5067d9
+vendor/lib64/libhypervintf.so|634ed432ca865b1356a57b42323327b23ae42598
+vendor/lib64/libwfdaac_vendor.so|47962df0108c91396bdb143de69dea1465f87d1b
+vendor/lib64/libvndfwk_detect_jni.qti_vendor.so|210f509756b99a9cb493347f57ddc2cdc501e6b0
+vendor/lib/libvmmem.so|67e97d4f518d216768f8e4cfc72e0b2c4001d200
+vendor/lib/libmemutils.so|cbdfb52234ac11d5b120b12094ed89058e683a7b
+vendor/lib/libsensorndkbridge.so|97c88be9d4f3ae7571465f7fe0a5e28695703359
+vendor/lib/libhypervintf.so|9a3f1657fc32702d942fcd654ce435ac7c24cb90
+vendor/lib/libvndfwk_detect_jni.qti_vendor.so|4bed67ea23e8d0a43c6f0d2f96af60eec86c3bb1
+vendor/lib/libgnss.so|d471d2f5b2ca2f9df73fd4b91dbbe855418cdc89
+vendor/lib/libgeofencing.so|452da08cbd5f254d37df36a4058b77972c58a440
+vendor/lib/libbatching.so|4ab6fde203168d5a9086341a9da91ead349abeb2
