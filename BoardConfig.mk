@@ -101,7 +101,8 @@ TARGET_KERNEL_SOURCE := kernel/samsung/sm8450
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     PROJECT_NAME=r0q \
     CROSS_COMPILE=aarch64-linux-gnu- \
-    CLANG_TRIPLE=aarch64-linux-gnu-
+    CLANG_TRIPLE=aarch64-linux-gnu- \
+    KCFLAGS=-Wno-int-conversion
 TARGET_KERNEL_CLANG_VERSION := r416183b
 TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
 
@@ -126,20 +127,7 @@ RECOVERY_KERNEL_MODULES := $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/samsung/sm8450-modules
 TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/mmrm-driver \
-    qcom/opensource/audio-kernel \
-    qcom/opensource/camera-kernel \
-    qcom/opensource/dataipa/drivers/platform/msm \
-    qcom/opensource/datarmnet/core \
-    qcom/opensource/datarmnet-ext/aps \
-    qcom/opensource/datarmnet-ext/offload \
-    qcom/opensource/datarmnet-ext/shs \
-    qcom/opensource/datarmnet-ext/perf \
-    qcom/opensource/datarmnet-ext/perf_tether \
-    qcom/opensource/datarmnet-ext/sch \
-    qcom/opensource/datarmnet-ext/wlan \
-    qcom/opensource/display-drivers/msm \
-    qcom/opensource/eva-kernel \
-    qcom/opensource/video-driver
+    qcom/opensource/audio-kernel
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
