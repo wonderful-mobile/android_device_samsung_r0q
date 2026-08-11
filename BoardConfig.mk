@@ -95,13 +95,14 @@ BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := false
 # TARGET_NEEDS_DTBOIMAGE := true
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
-#TARGET_KERNEL_CONFIG := vendor/r0q_defconfig
+TARGET_KERNEL_CONFIG := vendor/r0q_defconfig
 TARGET_KERNEL_VERSION := 5.10
-#TARGET_KERNEL_SOURCE := kernel/samsung/sm8450
+TARGET_KERNEL_SOURCE := kernel/samsung/sm8450
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     PROJECT_NAME=r0q \
     CROSS_COMPILE=aarch64-linux-gnu- \
     CLANG_TRIPLE=aarch64-linux-gnu- \
+    KBUILD_EXTRA_SYMBOLS=/mnt/hdd-data/android-dev/r0q/lineage/out/target/product/r0q/obj/sm8450-modules/qcom/opensource/mmrm-driver/Module.symvers \
     KCFLAGS=-Wno-int-conversion
 TARGET_KERNEL_CLANG_VERSION := r416183b
 TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
@@ -124,11 +125,11 @@ BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules
 BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
 RECOVERY_KERNEL_MODULES := $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 
-#TARGET_KERNEL_EXT_MODULE_ROOT := kernel/samsung/sm8450-modules
-#TARGET_KERNEL_EXT_MODULES := \
-#    qcom/opensource/mmrm-driver \
-#    qcom/opensource/audio-kernel \
-#    qcom/opensource/display-drivers/msm
+TARGET_KERNEL_EXT_MODULE_ROOT := kernel/samsung/sm8450-modules
+TARGET_KERNEL_EXT_MODULES := \
+    qcom/opensource/mmrm-driver \
+    qcom/opensource/audio-kernel \
+    qcom/opensource/display-drivers/msm
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -259,5 +260,6 @@ KERNEL_CROSS_COMPILE := CROSS_COMPILE=aarch64-linux-gnu-
 KERNEL_CLANG_TRIPLE := CLANG_TRIPLE=aarch64-linux-gnu-
 
 
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/modules/*.ko)BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/modules/*.ko)
+#TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
+#BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/modules/*.ko)
+#BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/modules/*.ko)
