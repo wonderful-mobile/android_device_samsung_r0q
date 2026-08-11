@@ -1,5 +1,6 @@
 sec_boot_stat.ko
 sec_log_buf.ko
+sec_arm64_ap_context.ko
 abc.ko
 gh_virt_wdt.ko
 qcom_wdt_core.ko
@@ -106,6 +107,12 @@ sec_debug_region.ko
 sec_key_notifier.ko
 sec_param.ko
 sec_pmsg.ko
+sec_qc_debug.ko
+sec_qc_dbg_partition.ko
+sec_qc_logger.ko
+sec_qc_param.ko
+sec_qc_summary.ko
+sec_qc_upload_cause.ko
 sec_upload_cause.ko
 sec_pm_log.ko
 i2c-gpio.ko
@@ -334,6 +341,16 @@ switch_class.ko
 switch_gpio.ko
 sec_sysup.ko
 sec_argos.ko
+sec_arm64_fsimd_debug.ko
+sec_qc_rbcmd.ko
+sec_qc_qcom_reboot_reason.ko
+sec_qc_soc_id.ko
+sec_qc_qcom_wdt_core.ko
+sec_qc_user_reset.ko
+sec_qc_smem.ko
+sec_qc_hw_param.ko
+sec_qc_rst_exinfo.ko
+sec_qc_rdx_bootdev.ko
 sec_reboot_cmd.ko
 dev_ril_bridge.ko
 sec_panel_notifier.ko
