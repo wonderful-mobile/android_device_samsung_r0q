@@ -135,6 +135,7 @@ qcom_rimps.ko
 c1dcvs_vendor.ko
 c1dcvs_scmi.ko
 bcl_pmic5.ko
+hdm.ko
 msm_rng.ko
 msm_sysstats.ko
 zsmalloc.ko
@@ -358,6 +359,7 @@ max77705_charger.ko
 dropdump.ko
 sec_vibrator_inputff_module.ko
 common_muic.ko
+input_booster_lkm.ko
 kperfmon.ko
 vibrator_vib_info.ko
 sec_tsp_log.ko
@@ -436,3 +438,5 @@ snd_debug_proc.ko
 qrtr-smd.ko
 qrtr-mhi.ko
 qrtr-gunyah.ko
+msm_drm.ko
+msm-mmrm.ko
