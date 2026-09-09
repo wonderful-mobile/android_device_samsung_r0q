@@ -715,7 +715,6 @@ vendor/lib64/librcmask.so|cbce2f34bcdf05842c4ebe069cfc197359cb7a3c
 vendor/lib64/libsdm-color.so|c791d6e6676ae2c316399c1daeff70fa21801187
 vendor/lib64/libsdm-colormgr-algo.so|43bd2dd951d6e54ecff434018af5d4d246cfbef0
 vendor/lib64/libsdm-disp-vndapis.so|20f2f832c1a3d56484051703f1ad807be0a8a170
-vendor/lib64/libsdmextension.so|6a36a794789014ef7fd41e9607558ec1089ac00d
 vendor/lib64/libtestutils.so|a7b1880d00a75a12d729025bb82929ddf23ba686
 vendor/lib64/libtinyxml2_1.so|ca719e7281f546b128fc9a0a52a81a494866103c
 
@@ -796,6 +795,7 @@ vendor/lib/vendor.qti.spu@1.0.so|99d4c277b677b8d3613e995c9fd2088b7e2fe4b1
 vendor/lib/vendor.qti.spu@1.1.so|f321f05cc1b095907839fc0803fb123891e71496
 vendor/lib/vendor.qti.spu@2.0.so|2258c25053ccb6eb338ff06010e7ce291de3af26
 vendor/lib64/hw/gatekeeper.mdfpp.so|ca02d2c7d02512038d7ee3f0d90c1454a84e5186|58ad147907b9f605d477d85ee1df1aa7686eef48
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so|6a0a02c940c4f1ad3c1302d1734320aaac28fd76
 vendor/lib64/vendor.qti.spu@1.0.so|a445d29112580b0b9691941f28409d8149a4f660
 vendor/lib64/vendor.qti.spu@1.1.so|9a7ee4bee9eb92715e9e7c189384ff6eec5511f2
 vendor/lib64/vendor.qti.spu@2.0.so|a0937d8034ab376d23489642dbf461cac4516c02
@@ -2556,3 +2556,10 @@ vendor/lib/libvndfwk_detect_jni.qti_vendor.so|4bed67ea23e8d0a43c6f0d2f96af60eec8
 vendor/lib/libgnss.so|d471d2f5b2ca2f9df73fd4b91dbbe855418cdc89
 vendor/lib/libgeofencing.so|452da08cbd5f254d37df36a4058b77972c58a440
 vendor/lib/libbatching.so|4ab6fde203168d5a9086341a9da91ead349abeb2
+vendor/etc/display/qdcm_calib_data_ss_dsi_panel_S6E3FAC_AMB606AW01_FHD.json|a9d08377cb1d1e77b72eae86728d4c15d48f8d0a
+vendor/etc/display/qdcm_calib_data_ss_dsi_panel_S6E3FAB_AMB624XT01_FHD.json|f199c39c7aecae13507ff39b285a9d3c932ef760
+vendor/etc/display/qdcm_calib_data_ss_dsi_panel_S6E3FAB_AMB667XU01_FHD.json|3b0a706bde0671b07e096be432d25f0bdd09b421
+vendor/lib64/libqti-perfd-client.so|5f0d8331e507cf5a8f50341b62199bd2b2a24279
+vendor/lib64/libgralloc_helper.unifunc.so|e082251fafb0594fae1e4379b6c30f9801603057
+vendor/lib64/libwifi-hal-ctrl.so|ba4fbfc16669d80f04cfc07cabfaf39e6590e622
+vendor/lib64/libwifi-hal-qcom.so|af48104a290e7a1a5f56e7473a7d8180c47d9372
