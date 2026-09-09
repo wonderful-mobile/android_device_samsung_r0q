@@ -440,3 +440,4 @@ qrtr-mhi.ko
 qrtr-gunyah.ko
 msm_drm.ko
 msm-mmrm.ko
+qca_cld3_wlan.ko
