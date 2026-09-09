@@ -55,6 +55,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
+# Codec2: replaces the stock Samsung fragment, which declares an IComponentStore
+# "default0" instance we do not ship. An undeclared-but-unregistered instance makes
+# Codec2Client block forever in getService(), deadlocking MediaCodecList and with it
+# mediaserver, MediaProvider and /storage/emulated/0.
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/vintf/sec_c2_manifest_default0_1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/sec_c2_manifest_default0_1_0.xml
+
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \

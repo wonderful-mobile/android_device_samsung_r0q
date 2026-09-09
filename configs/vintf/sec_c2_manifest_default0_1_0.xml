@@ -1,0 +1,30 @@
+<!--
+  Replaces the stock Samsung blob of the same name.
+
+  The stock fragment declares both "default" and "default0" instances of
+  android.hardware.media.c2@1.0::IComponentStore. "default0" was served by
+  samsung.software.media.c2@1.0-service, which we do not ship (it crash-loops:
+  libSecC2ComponentStore.so needs C2PlatformStorePluginLoader::createAllocator,
+  absent from the source-built libcodec2_vndk.so).
+
+  Leaving "default0" declared but unregistered makes Codec2Client call a blocking
+  IComponentStore::getService("default0") that never returns. That thread holds
+  MediaCodecList::sInitMutex, so every MediaCodec user deadlocks behind it:
+  mediaserver wedges in getCodecList(), MediaProvider ANRs, /storage/emulated/0
+  never mounts, and apps die with "Null external files dir".
+
+  "default" is still declared - vendor.qti.media.c2@1.0-service provides it, and
+  this is the only manifest that declares it, so it must not be dropped.
+-->
+<manifest version="1.0" type="device">
+<!-- IComponentStore -->
+   <hal format="hidl" override="true">
+        <name>android.hardware.media.c2</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IComponentStore</name>
+            <instance>default</instance>
+        </interface>
+   </hal>
+</manifest>

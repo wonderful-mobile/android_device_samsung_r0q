@@ -1472,7 +1472,6 @@ vendor/etc/vintf/manifest/lights-default-sec.xml|77e6675a0ad3fabc71bb8ce9ebba3be
 vendor/etc/vintf/manifest/manifest_non_qmaa.xml|ca8933881af97d5050e71ca7a2ecce4333c210d4
 vendor/etc/vintf/manifest/memtrack_qti.xml|bc00c5fa8287964be4a7e008a45f593a5a07df59
 vendor/etc/vintf/manifest/mppserver.xml|161f972a6c735518b50ec42ffc09ad7e203816be
-vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_0.xml|d78a93a5b06ade8ed38b64d891f6c66294acb28b
 vendor/etc/vintf/manifest/secaudiohalaidl_manifest.xml|e6ba4246996de00f7dffca081520f344c9a430a8
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml|cd7745bb829bc9bfb8a23ba779c796384e9b3835
 vendor/etc/vintf/manifest/vendor.samsung.hardware.authfw@1.0-manifest.xml|21745970a5020ea8edb323c0a5a87e1c5c0ff859
@@ -2553,3 +2552,43 @@ vendor/lib64/libVendorSemDataProps.so|8296bcb5db1103af84096d7139490921f7d09d74
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so|12e056f850b0bfb5f122120ed93ce887b0f19646
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so|3cd89c80598acc8d64703f298e26718eec90f2bf
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so|13da80def8e3c5f5b7e6efddd57c4f258b1defdf
+
+# Camera provider
+vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64|95c57f31fafa8f863dfd5c61b150c8a8a6b9bc45
+vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc|0fde52bdd5deed68abd79c4f6fc26ba31fd3654b
+vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so|8b05a1ca0daff4d8fe5486e9b64f16b99f2aaa5e|9833098f6fc958c77e5760977a524cc4ec19f787
+vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so|847b76a4d5b5b2c0a499670fbd83115c8867caae
+vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so|1317ded8d7907a790ca9bac0eba430a025573e96|ed64506579473a7e3f87113ba0de1e2c0b75c2d7
+vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so|0b60b0ff45a749ce855456343434a1cb33f06b07
+vendor/lib64/camera/com.samsung.sensor.gc5035.so|31862b21c82c29cd2c735083e32dc9ce4f80c8c2
+vendor/lib64/camera/com.samsung.sensor.hi1337.so|03fd769306c449804e340c1c213fa0b6b545abaa
+vendor/lib64/camera/com.samsung.sensor.hi847.so|5b8c11dad6d2a2e2711897988e72099f744c4ed4
+vendor/lib64/camera/com.samsung.sensormodule.0_lsi_s5kgn3.bin|d382327e6467f9027bc6b7787a43768d155e7cd5
+vendor/lib64/camera/com.samsung.sensormodule.12_sony_imx374_full.bin|52235a640064ceabf5cd73c484a684a4463bd60c
+vendor/lib64/camera/com.samsung.sensormodule.1_sony_imx374.bin|55b8bd4a5da74e9a47c33a118e84b5d692b014d7
+vendor/lib64/camera/com.samsung.sensormodule.2_sony_imx563.bin|be0ecb110605a5b66d3038961e2a423fc3289fe7
+vendor/lib64/camera/com.samsung.sensormodule.3_lsi_s5k3k1.bin|70b1723409997391484a392370712bcc5e5490a5
+vendor/lib64/camera/com.samsung.sensor.s5k3l6.so|7a75e18fa912815ad49df5b78c5449be0872c138
+vendor/lib64/camera/com.samsung.tuned.lsi_s5k3k1.bin|447df92c39418f5a74211bf02152eed74d96e898
+vendor/lib64/camera/com.samsung.tuned.lsi_s5kgn3.bin|52d45fcacd5199d0559ed7558aefd89410476377
+vendor/lib64/camera/com.samsung.tuned.sony_imx374.bin|567a654f7cd9e8231780e2faac2b2f7abed6e99f
+vendor/lib64/camera/com.samsung.tuned.sony_imx563.bin|768409b5b384fcd01fab33f6ef3908ee52428d3a
+
+# AGM tinyalsa plugins - required for PAL virtual sound card (waipiovirtualsndcard)
+# Without these, PAL fails: "Error: -5 virtual audio mixer open failure"
+vendor/lib64/libsndcardparser.so|ee453f120516050af3a08aeea06b57f1b7d98550
+vendor/lib/libsndcardparser.so|626624f291c2b3b88af4524ee75a1571b2ecc049
+vendor/lib/libagm_mixer_plugin.so|d0196aeddd04c75e07c00c060b9e071c4bc72989
+vendor/lib64/libagm_mixer_plugin.so|a0f226dab252af2bfdb3911e66b3b2f416cf4915
+vendor/lib/libagm_pcm_plugin.so|c429fb9dbe0cf4db98d14de739069f88286bc04f
+vendor/lib64/libagm_pcm_plugin.so|540f94de591482e4c0d905a53b5950247d646c6f
+vendor/lib/libagm_compress_plugin.so|f40217671e19d49f7dc96daaa61e4b4748bdd1a1
+vendor/lib64/libagm_compress_plugin.so|acef1145686eaa3badd85d77dae8277a7473ca63
+vendor/lib/libpalclient.so|75c1807f9dc765d47b08dafb578803d545c72c64
+vendor/lib64/libpalclient.so|7c3c898ba370be9191a637e16d6166a4c77db6ea
+vendor/lib/libagm.so|3b5cc1a3b0f58c75bad79242b2438d2f113f9d56
+vendor/lib64/libagm.so|a0b1f96f15b40c2fa8ed0be74048e9755a5e138c
+vendor/lib/libar-pal.so|a636484285ea3b71b55c3e4f6819ca90aee5bb1c
+vendor/lib64/libar-pal.so|0c6ecb9a9e7d99cd821582e8ea636967768a9e0c
+vendor/lib/libats.so|4fd9600413501fac5f55685229920ff9375c19c4
+vendor/lib64/libats.so|75de4771067ca91e25eb43ddf0002b0cba292d0b

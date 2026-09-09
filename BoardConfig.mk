@@ -43,7 +43,7 @@ BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 TARGET_PROVIDES_AUDIO_HAL := true
 TARGET_PROVIDES_LIBAR_PAL := true
-TARGET_USES_QCOM_MM_AUDIO := true
+TARGET_USES_QCOM_MM_AUDIO := false
 
 $(call soong_config_set, android_hardware_audio, run_64bit, true)
 
