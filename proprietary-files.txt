@@ -2563,3 +2563,5 @@ vendor/lib64/libqti-perfd-client.so|5f0d8331e507cf5a8f50341b62199bd2b2a24279
 vendor/lib64/libgralloc_helper.unifunc.so|e082251fafb0594fae1e4379b6c30f9801603057
 vendor/lib64/libwifi-hal-ctrl.so|ba4fbfc16669d80f04cfc07cabfaf39e6590e622
 vendor/lib64/libwifi-hal-qcom.so|af48104a290e7a1a5f56e7473a7d8180c47d9372
+vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
+vendor/firmware/wlan/qca_cld/wlan_mac.bin
