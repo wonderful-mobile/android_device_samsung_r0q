@@ -257,7 +257,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Product characteristics
-PRODUCT_CHARACTERISTICS := nosdcard
+PRODUCT_CHARACTERISTICS := default
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -429,3 +429,8 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/r0q/r0q-vendor.mk)
+
+# RIL
+PRODUCT_PACKAGES += \
+    sehradiomanager \
+    secril_config_svc
