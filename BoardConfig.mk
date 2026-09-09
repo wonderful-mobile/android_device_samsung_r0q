@@ -266,3 +266,8 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/module
 BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/modules/*.ko)
 
 TARGET_FORCE_PREBUILT_KERNEL := true
+
+# Filesystem features
+PRODUCT_QUOTA_PROJID := 1
+PRODUCT_ENABLE_QUOTA := true
+PRODUCT_FS_CASEFOLD := 1
