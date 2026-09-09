@@ -23,9 +23,11 @@ namespace_imports = [
     'vendor/samsung/r0q',
     'vendor/qcom/opensource/display',
     'hardware/qcom-caf/sm8450',
+    'hardware/samsung',
     'vendor/qcom/opensource/dataservices',
     'hardware/qcom-caf/wlan',
     'hardware/qcom/wlan/legacy',
+    'hardware/samsung',
     'hardware/qcom-caf/common/libqti-perfd-client',
 ]
 

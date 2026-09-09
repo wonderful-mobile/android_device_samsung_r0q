@@ -108,7 +108,6 @@ ro.oem_unlock_supported=1
 ro.opengles.version=196610
 ro.qc.sdk.audio.fluencetype=none
 ro.qc.sdk.audio.ssr=false
-ro.radio.noril=yes
 ro.security.cass.feature=1
 ro.security.keystore.keytype=sakv2,gak,sgak,
 ro.security.vpnpp.release=1.0
