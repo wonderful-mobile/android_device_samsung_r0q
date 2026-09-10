@@ -31,20 +31,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.bluetooth.audio@2.1-impl \
-    android.hardware.soundtrigger@2.3-impl \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usbv2.default \
-    sound_trigger.primary.taro:64 \
-    libaudiochargerlistener \
-    libbatterylistener \
-    libbluetooth_audio_session \
-    libfmpal \
-    libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libsndcardparser \
-    libvolumelistener
+    libbluetooth_audio_session
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8450/audio/primary-hal
 AUDIO_PAL_DIR := hardware/qcom-caf/sm8450/audio/pal
@@ -59,8 +49,6 @@ PRODUCT_COPY_FILES += \
 # "default0" instance we do not ship. An undeclared-but-unregistered instance makes
 # Codec2Client block forever in getService(), deadlocking MediaCodecList and with it
 # mediaserver, MediaProvider and /storage/emulated/0.
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/vintf/sec_c2_manifest_default0_1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/sec_c2_manifest_default0_1_0.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
@@ -71,10 +59,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
 # Bluetooth
-PRODUCT_PACKAGES += \
-    lib_bt_aptx \
-    lib_bt_ble \
-    lib_bt_bundle
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
@@ -268,7 +252,7 @@ PRODUCT_CHARACTERISTICS := default
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # QTI
 PRODUCT_COPY_FILES += \
@@ -308,7 +292,7 @@ PRODUCT_PACKAGES += \
     init.vendor.sensordebug.sh \
     install-recovery.sh \
     qca6234-service.sh \
-    vendor_modprobe.sh \
+    vendor_modprobe.sh
 
 PRODUCT_PACKAGES += \
     fstab.ramplus \
@@ -439,3 +423,5 @@ $(call inherit-product, vendor/samsung/r0q/r0q-vendor.mk)
 PRODUCT_PACKAGES += \
     sehradiomanager \
     secril_config_svc
+
+TARGET_USES_QCOM_MM_AUDIO := false

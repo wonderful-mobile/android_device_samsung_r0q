@@ -43,7 +43,6 @@ BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 TARGET_PROVIDES_AUDIO_HAL := true
 TARGET_PROVIDES_LIBAR_PAL := true
-TARGET_USES_QCOM_MM_AUDIO := false
 
 $(call soong_config_set, android_hardware_audio, run_64bit, true)
 
@@ -209,6 +208,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/sec_c2_manifest_default0_1_0.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
 # Verified Boot
@@ -271,3 +271,6 @@ TARGET_FORCE_PREBUILT_KERNEL := true
 PRODUCT_QUOTA_PROJID := 1
 PRODUCT_ENABLE_QUOTA := true
 PRODUCT_FS_CASEFOLD := 1
+
+# Use Samsung audio blobs instead of CAF source
+TARGET_USES_QCOM_MM_AUDIO := false
